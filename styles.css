@@ -1,0 +1,389 @@
+@font-face {
+    font-family: "HindSiliguri";
+    src: url("./fonts/HindSiliguri-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HindSiliguriBold";
+    src: url("./fonts/HindSiliguri-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url("./fonts/JosefinSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Teko";
+    src: url("./fonts/Teko-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+body {
+    font-family: "HindSiliguri", Helvetica, sans-serif;
+    background-image: url("./images/background.jpg");
+    min-height: 100px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.coins-container {
+    display: flex;
+    width: 320px;
+    width: fit-content;
+    margin: 0px auto;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 98%;
+}
+
+.coin-card {
+    width: 272px;
+    height: 128px;
+    margin: 12px;
+    padding: 4.8px 20px;
+    box-shadow: rgba(99, 99, 99, 0.5) 3.2px 8px 8px 0px;
+    background: linear-gradient(315deg, rgba(119, 170, 255, 0.95) 0%, rgba(187, 238, 255, 0.9) 100%);
+    border-radius: 25.6px 10px;
+    z-index: 1;
+}
+
+.coins-container>.coin-card:hover {
+    transform: scale(105%);
+}
+
+.coin-inner-info {
+    display: block;
+    position: relative;
+}
+
+.coin-name {
+    position: relative;
+    display: block;
+    font-family: "HindSiliguriBold", Helvetica, sans-serif;
+    font-size: 19.2px;
+    top: -118.4px;
+}
+
+.coin-symbol {
+    display: block;
+    font-size: 16px;
+    position: relative;
+    top: -116px;
+}
+
+.coin-market-cap {
+    position: relative;
+    left: 32px;
+    z-index: -1;
+    top: -20px;
+    color: white;
+    opacity: 0.35;
+    font-size: 64px;
+    font-family: "Teko", sans-serif;
+}
+
+.top-buttons-container {
+    width: max-content;
+    margin: 10px auto;
+    max-width: 95%;
+    background-color: rgb(249, 241, 178);
+    background: linear-gradient(180deg, rgba(100, 196, 237, 0.9) 0%, rgba(79, 129, 199, 0.9) 100%);
+    border-radius: 80px 80px 40px 40px;
+    color: white;
+    font-family: "HindSiliguriBold", Helvetica, sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3.2px 7.2px -3.2px;
+}
+
+.nav-bar-item {
+    margin: 0px !important;
+    cursor: pointer;
+    font-size: 19.2px;
+}
+
+.left-nav-bar {
+    border-radius: 80px 0px 0px 40px;
+}
+
+.right-nav-bar {
+    border-radius: 0px 80px 40px 0px;
+}
+
+.nav-bar-item:hover, .search-button:hover {
+    background: linear-gradient(180deg, rgba(91, 193, 236, 0.9) 0%, rgba(71, 125, 199, 0.9) 100%);
+}
+
+.search-container {
+    width: max-content;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 99%;
+}
+
+.search-textbox {
+    border-radius: 5px;
+    border: 0.5px solid #848484;
+    outline: 0;
+    height: 40px;
+    width: 192px;
+    text-align: center;
+    background-color: #f1fcfd;
+    margin-right: 10px;
+}
+
+.search-button {
+    border-radius: 5px;
+    height: 40px;
+    width: 96px;
+    background: linear-gradient(180deg, rgba(100, 196, 237, 0.9) 0%, rgba(79, 129, 199, 0.9) 100%);
+    color: white;
+    border: 0px;
+    font-family: "HindSiliguriBold", Helvetica, sans-serif;
+}
+
+.error-message {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    margin-top: 32px;
+    padding: 19px;
+    cursor: default;
+}
+
+.error-message-dismiss {
+    margin-top: 6px;
+    display: block;
+    font-size: 12.5px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.more-info-button {
+    position: absolute;
+    top: 48px;
+    left: 0px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #5588ff;
+    border-color: rgba(187, 238, 255, 0.8);
+}
+
+.slogan-heading-container {
+    height: fit-content;
+    width: max-content;
+    max-width: 95%;
+    margin: 10px auto;
+    text-align: center;
+    font-family: HindSiliguriBold, Helvetica, sans-serif;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+#sloganFirstPart, #sloganSecondPart, #sloganThirdPart {
+    visibility: hidden;
+}
+
+#sloganThirdPart {
+    color: #AFF5A6;
+}
+
+#sloganSecondPart {
+    color: #a5f4ee;
+}
+
+.slogan-smaller {
+    font-size: 25.5px !important;
+}
+
+.slogan-inner-text {
+    font-size: 29px;
+    color: #ecf7ff;
+}
+
+.coin-prices-and-image-container {
+    width: 160px;
+    position: relative;
+    max-height: 100.8px;
+    overflow-wrap: break-word;
+    margin-top: -153.6px;
+    margin-left: 91.2px;
+    border-bottom-right-radius: 25.6px;
+}
+
+.coin-price {
+    color: #0044BA;
+}
+
+.add-to-watchlist-checkbox {
+    position: relative;
+    left: 211.2px;
+    z-index: 1;
+    width: fit-content;
+}
+
+.loading-spinner {
+    background-image: url("./images/spinning-bitcoin.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto;
+    background-position: center center;
+}
+
+.coin-prices-and-image {
+    background-color: transparent;
+    height: 100.8px;
+    border: 0px;
+    padding: 3px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: inherit;
+}
+
+.flex-items {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: center;
+    order: 0;
+    margin: 0px 8px;
+    text-align: center;
+}
+
+.coin-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35.2px;
+    width: 35.2px;
+}
+
+.max-checkbox-container {
+    justify-content: space-between !important;
+}
+
+.max-checkbox-flex-item {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    margin-bottom: 10.08px;
+}
+
+.watched-coins-chart {
+    width: 95%;
+    margin: 20px auto;
+    min-height: 300px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+@media (min-width:320px) {
+    .nav-bar-item {
+        padding: 15.2px 24px;
+    }
+
+    .about-me-photo {
+        width: 80px;
+        margin: 10px 0;
+    }
+
+    .about-me-text {
+        display: block;
+        text-shadow: 1px 1px 2px rgba(218, 247, 220, 0.8);
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 8px 19.2px;
+
+        width: 90%;
+        margin: 20px auto;
+        font-family: "JosefinSans", sans-serif;
+        display: none;
+        margin-bottom: 40px;
+    }
+
+    .slogan-smaller {
+        display: block;
+    }
+
+}
+
+@media (min-width:481px) {
+    .nav-bar-item {
+        padding: 15.2px 60px;
+    }
+
+}
+
+@media (min-width:641px) {
+    .about-me-photo {
+        width: 192px;
+        margin-right: 24px;
+    }
+
+    .about-me-text {
+        display: block;
+        text-shadow: 1px 1px 2px rgba(218, 247, 220, 0.8);
+        font-size: 19.2px;
+        text-align: justify;
+    }
+
+    .about-container {
+        width: 960px !important;
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px 30px;
+        font-family: "JosefinSans", sans-serif;
+        display: none;
+        flex-direction: row;
+        margin-bottom: 40px;
+    }
+
+    .slogan-smaller {
+        display: inline-block;
+    }
+}
